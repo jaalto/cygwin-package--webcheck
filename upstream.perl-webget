@@ -1,6 +1,2 @@
-# Example for sourceforge. The *mesh* is mirror Duesseldorf, Germany
-# tag1: msmtp
-#  http://prdownloads.sourceforge.net/foo/foo-1.4.5.tar.bz2 mirror:mesh page: new: x:
-
-tag1: program
+tag1: webcheck
   http://packages.debian.org/unstable/web/webcheck pregexp:tar.gz file:webcheck_1.10.1.tar.gz  new: x:
