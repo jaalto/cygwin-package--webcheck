@@ -1,0 +1,83 @@
+=== added file 'Makefile'
+--- Makefile	1970-01-01 00:00:00 +0000
++++ Makefile	2007-08-05 21:38:10 +0000
+@@ -0,0 +1,78 @@
++#!/usr/bin/make -f
++
++ifneq (,)
++This makefile requires GNU Make.
++endif
++
++DESTDIR		=
++prefix		= /usr
++exec_prefix	= $(prefix)
++man_prefix	= $(prefix)/share
++
++PACKAGE		= webcheck
++INSTALL		= /usr/bin/install
++INSTALL_BIN	= $(INSTALL) -m 755
++INSTALL_DATA	= $(INSTALL) -m 644
++INSTALL_OBJS	= $(PACKAGE)
++
++INSTALL_OBJS_BIN   = $(PACKAGE).py
++INSTALL_OBJS_MAN1  = *.1
++INSTALL_OBJS_SHARE_FILE = *.py 
++INSTALL_OBJS_SHARE_DIR  = fancytooltips parsers parsers/html plugins schemes
++
++MANDIR1		= $(DESTDIR)$(man_prefix)/man/man1
++MANDIR5		= $(DESTDIR)$(man_prefix)/man/man5
++MANDIR8		= $(DESTDIR)$(man_prefix)/man/man8
++BINDIR		= $(DESTDIR)$(exec_prefix)/bin
++SBINDIR		= $(DESTDIR)$(exec_prefix)/sbin
++ETCDIR		= $(DESTDIR)$/etc/$PACKAGE
++SHAREDIR	= $(DESTDIR)$(prefix)/share/$(PACKAGE)
++LIBDIR		= $(DESTDIR)$(prefix)/lib/$(PACKAGE)
++
++DEBUG		= -g
++CC		= gcc
++GCCFLAGS	= -Wall
++CFLAGS		= $(GCCFLAGS) $(DEBUG) -O2
++OBJS		= $(PACKAGE).c
++
++.PHONY: clean distclean install install-man install-bin
++
++all:
++	echo "Nothing to compile"
++
++make: $(PACKAGE)
++
++$(PACKAGE): $(OBJS)
++	$(CC) -o $@ $<
++
++clean:
++	-rm -f *[#~] *.\#* *.o *.exe core *.stackdump
++
++distclean: clean
++
++install-etc:
++	$(INSTALL_BIN) -d $(ETCDIR)
++	$(INSTALL_BIN)	  $(INSTALL_OBJS_ETC) $(ETCDIR)
++
++install-bin:
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN) $(INSTALL_OBJS_BIN) $(SHAREDIR)/$(INSTALL_OBJS_BIN)
++	cd $(BINDIR); \
++	   ln -s ../share/$(PACKAGE)/$(INSTALL_OBJS_BIN) webcheck
++
++install-man:
++	$(INSTALL_BIN) -d $(MANDIR1)
++	$(INSTALL_DATA) $(INSTALL_OBJS_MAN1) $(MANDIR1)
++
++install-share:
++	$(INSTALL_BIN) -d $(SHAREDIR)
++	$(INSTALL_BIN) $(INSTALL_OBJS_SHARE_FILE) $(SHAREDIR)/
++	for i in $(INSTALL_OBJS_SHARE_DIR); \
++	do \
++		$(INSTALL_BIN) -d $(SHAREDIR)/$$i; \
++		$(INSTALL_DATA) $$i/* $(SHAREDIR)/$$i/; \
++	done
++
++install: install-man install-share install-bin
++
++# End of file
+
