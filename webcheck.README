@@ -7,7 +7,7 @@ Program crawls a given website and generates a number of reports in
 the form of html pages. It is easy to use and generates simple, clear
 and readable reports.
 
-Features of webcheck include: 
+Features of webcheck include:
 
  * support for http, https, ftp and file schemes
  * view the structure of a site
@@ -27,6 +27,9 @@ Build requirements:
 Canonical homepage:
   http://arthurdejong.org/webcheck
   http://packages.debian.org/webcheck
+
+  NOTE, completely different project:
+  http://freshmeat.net/projects/webcheck
 
 Canonical download:
   See above
