@@ -3,4 +3,4 @@ ldesc: "Program crawls a given website and generates a number of reports in
 the form of html pages. It is easy to use and generates simple, clear
 and readable reports."
 category: Web
-requires: cygwin python
+requires: python

@@ -22,11 +22,11 @@ Runtime requirements:
 
 Build requirements:
   cygwin
+  python
 
 Canonical homepage:
-  http://ch.tudelft.nl/~arthur/webcheck
+  http://arthurdejong.org/webcheck
   http://packages.debian.org/webcheck
-  http://packages.ubuntu.com/cgi-bin/search_packages.pl?keywords=webcheck&searchon=names&subword=1&version=all&release=all
 
 Canonical download:
   See above
@@ -50,60 +50,31 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack webcheck-1.10.1-1-src.tar.bz2
+  unpack webcheck-1.10.3-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./webcheck*.sh all
 
 This will create:
-  webcheck-1.10.1-1.tar.bz2
-  webcheck-1.10.1-1-src.tar.bz2
+  webcheck-1.10.3-1.tar.bz2
+  webcheck-1.10.3-1-src.tar.bz2
+
+------------------------------------------
+
+Files included in the binary distribution:
+  See Cygwin package archive
 
 -------------------------------------------
 
-Files included in the binary distro:
+Port Notes:
 
-usr/bin/webcheck.py -> ../share/webcheck/webcheck.py
-usr/share/doc/Cygwin/webcheck-1.9.5.README
-usr/share/doc/webcheck-1.9.5/AUTHORS
-usr/share/doc/webcheck-1.9.5/COPYING
-usr/share/doc/webcheck-1.9.5/ChangeLog
-usr/share/doc/webcheck-1.9.5/NEWS
-usr/share/doc/webcheck-1.9.5/README
-usr/share/doc/webcheck-1.9.5/TODO
-usr/share/man/man1/webcheck.1.gz
-usr/share/webcheck/config.py
-usr/share/webcheck/crawler.py
-usr/share/webcheck/debugio.py
-usr/share/webcheck/fancytooltips/fancytooltips.css
-usr/share/webcheck/fancytooltips/fancytooltips.js
-usr/share/webcheck/fancytooltips/readme.txt
-usr/share/webcheck/parsers/__init__.py
-usr/share/webcheck/parsers/css.py
-usr/share/webcheck/parsers/html.py
-usr/share/webcheck/plugins/__init__.py
-usr/share/webcheck/plugins/about.py
-usr/share/webcheck/plugins/badlinks.py
-usr/share/webcheck/plugins/external.py
-usr/share/webcheck/plugins/images.py
-usr/share/webcheck/plugins/new.py
-usr/share/webcheck/plugins/notchkd.py
-usr/share/webcheck/plugins/notitles.py
-usr/share/webcheck/plugins/old.py
-usr/share/webcheck/plugins/problems.py
-usr/share/webcheck/plugins/sitemap.py
-usr/share/webcheck/plugins/slow.py
-usr/share/webcheck/plugins/urllist.py
-usr/share/webcheck/schemes/__init__.py
-usr/share/webcheck/schemes/file.py
-usr/share/webcheck/schemes/ftp.py
-usr/share/webcheck/schemes/http.py
-usr/share/webcheck/schemes/https.py
-usr/share/webcheck/webcheck.py
+----- version 1.10.3-1 -----
+- New upstream release 2010-06-19 Jari Aalto
 
 ----- version 1.10.1-1 -----
 - Initial release 2007-08-02, Jari Aalto
 - No makefile. Wrote one.
 
-Cygwin port maintained by: Jari Aalto <jari dt aalto A T cante dt net>
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007-2010 Jari Aalto; Licensed under GPL v2 or later
