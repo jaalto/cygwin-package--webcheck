@@ -53,15 +53,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack webcheck-1.10.3-1-src.tar.bz2
+  unpack webcheck-1.10.4-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./webcheck*.sh all
 
 This will create:
-  webcheck-1.10.3-1.tar.bz2
-  webcheck-1.10.3-1-src.tar.bz2
+  webcheck-1.10.4-1.tar.bz2
+  webcheck-1.10.4-1-src.tar.bz2
 
 ------------------------------------------
 
@@ -72,6 +72,9 @@ Files included in the binary distribution:
 
 Port Notes:
 
+----- version 1.10.4-1 -----
+- New upstream release 2011-02-10 Jari Aalto
+
 ----- version 1.10.3-1 -----
 - New upstream release 2010-06-19 Jari Aalto
 
@@ -80,4 +83,4 @@ Port Notes:
 - No makefile. Wrote one.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007-2010 Jari Aalto; Licensed under GPL v2 or later
+Copyright (C) 2007-2011 Jari Aalto; Licensed under GPL v2 or later
