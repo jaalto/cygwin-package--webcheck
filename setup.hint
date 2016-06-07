@@ -1,3 +1,4 @@
+# ARCH=noarch
 sdesc: "Website link and structure checker"
 ldesc: "Program crawls a given website and generates a number of reports in
 the form of html pages. It is easy to use and generates simple, clear
